@@ -35,30 +35,22 @@ make sure all the above installations are installed properly.
 # Usage : 
 ## Project Structure:
 - src
--- main
------java
-------- com
-----------example
---------------- OJT
---------------------OjtApplication.java                       // main  method class
-------------------- config
------------------------- AppConfig.java
------------------------- SecurityConfig.java                  // Spring Security configuration
------------------------- WebSecurityConfigurerAdapter.java
-------------------- controllers
------------------------- UserController.java                  // REST controller for authentication
-------------------- models
------------------------- User.java                            // User entity
-------------------- repository
------------------------- UserRepository.java          // User repository interface
-------------------- service
------------------------- UserService.java             // User service class
-------------------- utils
------------------------- JwtUtil.java                 // JWT utility class
-------------------- filter
-------------------------- JwtAuthenticationFilter.java   
------ resources
------------application.properties   
+- main
+- java
+- com
+- example
+- OJT
+- OjtApplication.java                       // main  method class
+- config >> AppConfig.java
+          >> SecurityConfig.java                  // Spring Security configuration
+          >> WebSecurityConfigurerAdapter.java
+- controllers >> UserController.java                  // REST controller for authentication
+- models >> User.java                            // User entity
+- repository >>  UserRepository.java          // User repository interface
+- service >> UserService.java             // User service class
+- utils >> JwtUtil.java                 // JWT utility class
+- filter >> JwtAuthenticationFilter.java   
+- resources >> application.properties   
 - By using this project structure  develop the backend application
 - Run the OjtApplication.java file, the Spring Boot application will starts.
 
