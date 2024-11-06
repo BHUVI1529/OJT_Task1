@@ -39,7 +39,7 @@ public class UserService implements UserDetailsService {
 
         return org.springframework.security.core.userdetails.User.withUsername(user.getUsername())
                 .password(user.getPassword())
-                .authorities(user.getRole() != null ? Collections.singleton(new SimpleGrantedAuthority("ROLE_" + user.getRole().name())) : Collections.singleton(new SimpleGrantedAuthority("ROLE_USER"))) // Default to USER if role is null
+                .authorities(user.getRole() != null ? Collections.singleton(new SimpleGrantedAuthority("ROLE_ADMIN" + user.getRole().name())) : Collections.singleton(new SimpleGrantedAuthority("ROLE_USER"))) // Default to USER if role is null
                 .build();
     }
 
